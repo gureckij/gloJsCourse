@@ -20,3 +20,5 @@ console.log("Стоимость разработки сайта " + fullPrice + 
 screens = screens.toLocaleLowerCase();
 screens = screens.split(", ")
 console.log(screens);
+
+console.log("Откат посреднику за работу: " + (fullPrice * (rollback / 100)) + "%");
