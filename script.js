@@ -16,3 +16,7 @@ console.log(screens.length);
 
 console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
 console.log("Стоимость разработки сайта " + fullPrice + " рублей");
+
+screens = screens.toLocaleLowerCase();
+screens = screens.split(", ")
+console.log(screens);
