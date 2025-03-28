@@ -11,3 +11,5 @@ console.log('Вывод сообщения в консоль!');
 console.log(typeof title);
 console.log(typeof fullPrice);
 console.log(typeof adaptive);
+
+console.log(screens.length);
