@@ -13,3 +13,6 @@ console.log(typeof fullPrice);
 console.log(typeof adaptive);
 
 console.log(screens.length);
+
+console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
+console.log("Стоимость разработки сайта " + fullPrice + " рублей");
