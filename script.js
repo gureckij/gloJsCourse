@@ -1,5 +1,5 @@
 let title;
-let screens = "Простые, Сложные, Интерактивные";
+let screens;
 let screenPrice = 5;
 let rollback = 10;
 let fullPrice = 100;
@@ -12,6 +12,7 @@ console.log(typeof title);
 console.log(typeof fullPrice);
 console.log(typeof adaptive);
 
+screens = prompt("Какие типы экранов нужно разработать?")
 console.log(screens.length);
 
 console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
