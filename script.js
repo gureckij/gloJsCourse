@@ -2,7 +2,7 @@ let title;
 let screens;
 let screenPrice;
 let rollback = 10;
-let fullPrice = 100;
+let fullPrice;
 let adaptive;
 let service1;
 let servicePrice1;
@@ -32,10 +32,11 @@ service2 = prompt("Какой дополнительный тип услуг н�
 servicePrice2 = prompt("Сколько это будет стоить?");
 console.log("Дополнительная услуга " + service2 + " по цене: " + servicePrice2);
 
+fullPrice = Number(screenPrice) + Number(servicePrice1) + Number(servicePrice2);
 console.log("Стоимость разработки сайта " + fullPrice + " рублей");
 
 screens = screens.toLocaleLowerCase();
 screens = screens.split(", ")
 console.log(screens);
 
-console.log("Откат посреднику за работу: " + (fullPrice * (rollback / 100)) + "%");
+console.log("Откат посреднику за работу: " + (fullPrice * (rollback / 100)));
