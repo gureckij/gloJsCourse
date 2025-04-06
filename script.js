@@ -43,3 +43,13 @@ console.log("Откат посреднику за работу: " + (fullPrice *
 
 let servicePercentPrice = Math.ceil(fullPrice - fullPrice * (rollback / 100));
 console.log("Итоговая стоимость за вычетом отката посреднику: " + servicePercentPrice + " рублей");
+
+if (fullPrice > 30000) {
+	console.log("Даём скидку в 10%");
+} else if (fullPrice > 15000 && fullPrice <= 30000) {
+	console.log("Даём скидку в 5%");
+} else if (fullPrice > 0 && fullPrice <= 15000) {
+	console.log("Скидка не предусмотрена");
+} else if (fullPrice <= 0) {
+	console.log("Что то пошло не так");
+}
