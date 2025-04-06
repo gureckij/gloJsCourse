@@ -1,48 +1,23 @@
-let title;
-let screens;
-let screenPrice;
-let rollback = 10;
-let fullPrice;
-let adaptive;
+// блок объявления переменных
+const rollback = 10;
+let title = prompt("Как называется ваш проект?");
+let screens = prompt("Какие типы экранов нужно разработать?");
+let screenPrice = +prompt("Сколько будет стоить данная работа?");
+let adaptive = confirm("Нужен ли адаптив на сайте?");
+service1 = prompt("Какой дополнительный тип услуги нужен?");
+servicePrice1 = +prompt("Сколько это будет стоить?");
+service2 = prompt("Какой дополнительный тип услуг нужен?");
+servicePrice2 = +prompt("Сколько это будет стоить?");
+let fullPrice = screenPrice + servicePrice1 + servicePrice2;
+let servicePercentPrice = Math.ceil(fullPrice - fullPrice * (rollback / 100));
 let service1;
 let servicePrice1;
 let service2;
 let servicePrice2;
 
-title = prompt("Как называется ваш проект?");
-console.log(title);
-
-console.log(typeof title);
-console.log(typeof fullPrice);
-console.log(typeof adaptive);
-
-screens = prompt("Какие типы экранов нужно разработать?")
-console.log(screens.length);
-
-adaptive = confirm("Нужен ли адаптив на сайте?");
-console.log("Адаптив сайта " + adaptive);
-
-screenPrice = +prompt("Сколько будет стоить данная работа?")
-console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
-
-service1 = prompt("Какой дополнительный тип услуги нужен?");
-servicePrice1 = +prompt("Сколько это будет стоить?");
-console.log("Дополнительная услуга " + service1 + " по цене: " + servicePrice1);
-service2 = prompt("Какой дополнительный тип услуг нужен?");
-servicePrice2 = +prompt("Сколько это будет стоить?");
-console.log("Дополнительная услуга " + service2 + " по цене: " + servicePrice2);
-
-fullPrice = screenPrice + servicePrice1 + servicePrice2;
-console.log("Стоимость разработки сайта " + fullPrice + " рублей");
-
+// блок функционала
 screens = screens.toLocaleLowerCase();
 screens = screens.split(", ")
-console.log(screens);
-
-console.log("Откат посреднику за работу: " + (fullPrice * (rollback / 100)));
-
-let servicePercentPrice = Math.ceil(fullPrice - fullPrice * (rollback / 100));
-console.log("Итоговая стоимость за вычетом отката посреднику: " + servicePercentPrice + " рублей");
 
 if (fullPrice > 30000) {
 	console.log("Даём скидку в 10%");
@@ -53,3 +28,18 @@ if (fullPrice > 30000) {
 } else if (fullPrice <= 0) {
 	console.log("Что то пошло не так");
 }
+
+// блок вывода в консоль
+console.log(title);
+console.log(typeof title);
+console.log(typeof fullPrice);
+console.log(typeof adaptive);
+console.log(screens.length);
+console.log("Адаптив сайта " + adaptive);
+console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
+console.log("Дополнительная услуга " + service1 + " по цене: " + servicePrice1);
+console.log("Дополнительная услуга " + service2 + " по цене: " + servicePrice2);
+console.log("Стоимость разработки сайта " + fullPrice + " рублей");
+console.log(screens);
+console.log("Откат посреднику за работу: " + (fullPrice * (rollback / 100)));
+console.log("Итоговая стоимость за вычетом отката посреднику: " + servicePercentPrice + " рублей");
