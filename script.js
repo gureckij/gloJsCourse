@@ -3,7 +3,7 @@ let screens;
 let screenPrice;
 let rollback = 10;
 let fullPrice = 100;
-let adaptive = true;
+let adaptive;
 
 title = prompt("Как называется ваш проект?");
 console.log(title);
@@ -14,6 +14,9 @@ console.log(typeof adaptive);
 
 screens = prompt("Какие типы экранов нужно разработать?")
 console.log(screens.length);
+
+adaptive = confirm("Нужен ли адаптив на сайте?");
+console.log("Адаптив сайта " + adaptive);
 
 screenPrice = prompt("Сколько будет стоить данная работа?")
 console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
