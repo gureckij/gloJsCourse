@@ -4,16 +4,12 @@ let title = prompt("Как называется ваш проект?");
 let screens = prompt("Какие типы экранов нужно разработать?");
 let screenPrice = +prompt("Сколько будет стоить данная работа?");
 let adaptive = confirm("Нужен ли адаптив на сайте?");
-service1 = prompt("Какой дополнительный тип услуги нужен?");
-servicePrice1 = +prompt("Сколько это будет стоить?");
-service2 = prompt("Какой дополнительный тип услуг нужен?");
-servicePrice2 = +prompt("Сколько это будет стоить?");
+let service1 = prompt("Какой дополнительный тип услуги нужен?");
+let servicePrice1 = +prompt("Сколько это будет стоить?");
+let service2 = prompt("Какой дополнительный тип услуг нужен?");
+let servicePrice2 = +prompt("Сколько это будет стоить?");
 let fullPrice = screenPrice + servicePrice1 + servicePrice2;
 let servicePercentPrice = Math.ceil(fullPrice - fullPrice * (rollback / 100));
-let service1;
-let servicePrice1;
-let service2;
-let servicePrice2;
 
 // блок функционала
 screens = screens.toLocaleLowerCase();
