@@ -22,17 +22,17 @@ console.log(screens.length);
 adaptive = confirm("Нужен ли адаптив на сайте?");
 console.log("Адаптив сайта " + adaptive);
 
-screenPrice = prompt("Сколько будет стоить данная работа?")
+screenPrice = +prompt("Сколько будет стоить данная работа?")
 console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
 
 service1 = prompt("Какой дополнительный тип услуги нужен?");
-servicePrice1 = prompt("Сколько это будет стоить?");
+servicePrice1 = +prompt("Сколько это будет стоить?");
 console.log("Дополнительная услуга " + service1 + " по цене: " + servicePrice1);
 service2 = prompt("Какой дополнительный тип услуг нужен?");
-servicePrice2 = prompt("Сколько это будет стоить?");
+servicePrice2 = +prompt("Сколько это будет стоить?");
 console.log("Дополнительная услуга " + service2 + " по цене: " + servicePrice2);
 
-fullPrice = Number(screenPrice) + Number(servicePrice1) + Number(servicePrice2);
+fullPrice = screenPrice + servicePrice1 + servicePrice2;
 console.log("Стоимость разработки сайта " + fullPrice + " рублей");
 
 screens = screens.toLocaleLowerCase();
