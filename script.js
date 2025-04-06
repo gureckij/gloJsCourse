@@ -40,3 +40,6 @@ screens = screens.split(", ")
 console.log(screens);
 
 console.log("Откат посреднику за работу: " + (fullPrice * (rollback / 100)));
+
+let servicePercentPrice = Math.ceil(fullPrice - fullPrice * (rollback / 100));
+console.log("Итоговая стоимость за вычетом отката посреднику: " + servicePercentPrice + " рублей");
