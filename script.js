@@ -4,6 +4,10 @@ let screenPrice;
 let rollback = 10;
 let fullPrice = 100;
 let adaptive;
+let service1;
+let servicePrice1;
+let service2;
+let servicePrice2;
 
 title = prompt("Как называется ваш проект?");
 console.log(title);
@@ -20,6 +24,14 @@ console.log("Адаптив сайта " + adaptive);
 
 screenPrice = prompt("Сколько будет стоить данная работа?")
 console.log("Стоимость вёрстки экранов " + screenPrice + " рублей");
+
+service1 = prompt("Какой дополнительный тип услуги нужен?");
+servicePrice1 = prompt("Сколько это будет стоить?");
+console.log("Дополнительная услуга " + service1 + " по цене: " + servicePrice1);
+service2 = prompt("Какой дополнительный тип услуг нужен?");
+servicePrice2 = prompt("Сколько это будет стоить?");
+console.log("Дополнительная услуга " + service2 + " по цене: " + servicePrice2);
+
 console.log("Стоимость разработки сайта " + fullPrice + " рублей");
 
 screens = screens.toLocaleLowerCase();
